@@ -15,13 +15,23 @@ class ManageAccountActivity : AppCompatActivity() {
         supportActionBar?.title = "Manage Account"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        findViewById<Button>(R.id.btnLogout).setOnClickListener {
-            SessionManager.logout(this)
-            Toast.makeText(this, "Logged out", Toast.LENGTH_SHORT).show()
-            startActivity(Intent(this, MainActivity::class.java).apply {
-                flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
-            })
-            finish()
+        val btnLogout = findViewById<Button>(R.id.btnLogout)
+        if (!SessionManager.isLoggedIn(this)) {
+            // Guest mode: no account to log out of — offer sign-in instead.
+            btnLogout.text = "Login / Sign Up"
+            btnLogout.setOnClickListener {
+                startActivity(Intent(this, LoginActivity::class.java))
+                finish()
+            }
+        } else {
+            btnLogout.setOnClickListener {
+                SessionManager.logout(this)
+                Toast.makeText(this, "Logged out", Toast.LENGTH_SHORT).show()
+                startActivity(Intent(this, MainActivity::class.java).apply {
+                    flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
+                })
+                finish()
+            }
         }
 
         findViewById<Button>(R.id.btnDeleteAccount).setOnClickListener {

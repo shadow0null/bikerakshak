@@ -117,8 +117,8 @@ class ProfileFragment : Fragment() {
             if (loggedIn) SessionManager.name(ctx).take(2).uppercase() else "BR"
         v.findViewById<Button>(R.id.btnGoLogin).visibility =
             if (loggedIn) View.GONE else View.VISIBLE
-        v.findViewById<Button>(R.id.btnEditProfile).isEnabled = loggedIn
-        v.findViewById<Button>(R.id.btnManageAccount).isEnabled = loggedIn
+        // No login wall: Edit Profile and Manage Account work for guests too.
+        // Guest profile (name/phone) is stored on this phone only.
         refreshVehicles(v)
     }
 
