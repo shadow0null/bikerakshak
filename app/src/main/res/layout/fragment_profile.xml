@@ -14,17 +14,49 @@
         android:textColor="@color/navy" />
 
     <TextView
+        android:id="@+id/tvProfileName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Guest User"
-        android:textSize="16sp"
+        android:textSize="18sp"
+        android:textStyle="bold"
         android:layout_marginTop="16dp" />
 
     <TextView
+        android:id="@+id/tvProfileEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login comes in a later screen."
+        android:text="Login to book faster"
         android:textSize="14sp"
         android:textColor="@color/text_grey"
         android:layout_marginTop="4dp" />
+
+    <Button
+        android:id="@+id/btnGoLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login / Sign Up"
+        android:backgroundTint="@color/rescue_orange"
+        android:layout_marginTop="20dp" />
+
+    <Button
+        android:id="@+id/btnEditProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Edit Profile"
+        android:layout_marginTop="12dp" />
+
+    <Button
+        android:id="@+id/btnSavedAddresses"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Saved Addresses"
+        android:layout_marginTop="12dp" />
+
+    <Button
+        android:id="@+id/btnManageAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Manage Account"
+        android:layout_marginTop="12dp" />
 </LinearLayout>
