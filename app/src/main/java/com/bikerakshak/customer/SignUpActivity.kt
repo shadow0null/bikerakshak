@@ -25,8 +25,8 @@ class SignUpActivity : AppCompatActivity() {
         val etPassword = findViewById<EditText>(R.id.etPassword)
         val etConfirm = findViewById<EditText>(R.id.etConfirmPassword)
 
-        setupToggle(etPassword, findViewById(R.id.tvTogglePassword))
-        setupToggle(etConfirm, findViewById(R.id.tvToggleConfirm))
+        setupToggle(etPassword, findViewById(R.id.ivTogglePassword))
+        setupToggle(etConfirm, findViewById(R.id.ivToggleConfirm))
 
         findViewById<Button>(R.id.btnSignup).setOnClickListener {
             val name = etName.text.toString().trim()
