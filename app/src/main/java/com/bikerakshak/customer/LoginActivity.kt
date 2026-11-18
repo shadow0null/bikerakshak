@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.text.InputType
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -20,16 +21,17 @@ class LoginActivity : AppCompatActivity() {
 
         val etEmail = findViewById<EditText>(R.id.etEmail)
         val etPassword = findViewById<EditText>(R.id.etPassword)
-        val tvToggle = findViewById<TextView>(R.id.tvTogglePassword)
+        val ivToggle = findViewById<ImageView>(R.id.ivTogglePassword)
 
-        tvToggle.setOnClickListener {
-            val showing = etPassword.inputType and InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD != 0
+        var showing = false
+        ivToggle.setOnClickListener {
+            showing = !showing
             etPassword.inputType = if (showing) {
-                InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
-            } else {
                 InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
+            } else {
+                InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
             }
-            tvToggle.text = if (showing) "Show" else "Hide"
+            ivToggle.setImageResource(if (showing) R.drawable.ic_eye else R.drawable.ic_eye_off)
             etPassword.setSelection(etPassword.text.length)
         }
 

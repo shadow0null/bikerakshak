@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.text.InputType
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -85,15 +86,16 @@ class SignUpActivity : AppCompatActivity() {
         }
     }
 
-    private fun setupToggle(field: EditText, toggle: TextView) {
+    private fun setupToggle(field: EditText, toggle: ImageView) {
+        var showing = false
         toggle.setOnClickListener {
-            val showing = field.inputType and InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD != 0
+            showing = !showing
             field.inputType = if (showing) {
-                InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
-            } else {
                 InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
+            } else {
+                InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
             }
-            toggle.text = if (showing) "Show" else "Hide"
+            toggle.setImageResource(if (showing) R.drawable.ic_eye else R.drawable.ic_eye_off)
             field.setSelection(field.text.length)
         }
     }
