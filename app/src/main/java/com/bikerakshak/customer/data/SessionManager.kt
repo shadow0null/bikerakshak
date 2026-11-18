@@ -53,6 +53,7 @@ object SessionManager {
         context.getSharedPreferences(PREFS, Context.MODE_PRIVATE).edit().clear().apply()
         BookingRepository.clearAll(context)
         AddressStore.clearAll(context)
+        VehicleStore.clearAll(context)
         CartManager.clear()
     }
 }

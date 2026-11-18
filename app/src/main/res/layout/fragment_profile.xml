@@ -1,62 +1,213 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:background="#F4F4F4">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Profile"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:textColor="@color/navy" />
-
-    <TextView
-        android:id="@+id/tvProfileName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Guest User"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:layout_marginTop="16dp" />
-
-    <TextView
-        android:id="@+id/tvProfileEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Login to book faster"
-        android:textSize="14sp"
-        android:textColor="@color/text_grey"
-        android:layout_marginTop="4dp" />
-
-    <Button
-        android:id="@+id/btnGoLogin"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Login / Sign Up"
-        android:backgroundTint="@color/rescue_orange"
-        android:layout_marginTop="20dp" />
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btnEditProfile"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Edit Profile"
-        android:layout_marginTop="12dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/navy"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="20dp">
 
-    <Button
-        android:id="@+id/btnSavedAddresses"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Saved Addresses"
-        android:layout_marginTop="12dp" />
+            <TextView
+                android:id="@+id/tvAvatar"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:background="@drawable/bg_avatar_circle"
+                android:gravity="center"
+                android:text="BR"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/btnManageAccount"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Manage Account"
-        android:layout_marginTop="12dp" />
-</LinearLayout>
+            <TextView
+                android:id="@+id/tvProfileName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Guest User"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:id="@+id/tvProfileEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Login to book faster"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                android:layout_marginTop="2dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Motihari"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:background="#33FFFFFF"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="My Vehicles"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/navy" />
+
+                <TextView
+                    android:id="@+id/btnAddVehicle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+ Add New"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/rescue_orange" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvVehicles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No vehicles added yet"
+                android:textSize="13sp"
+                android:textColor="@color/text_grey"
+                android:layout_marginTop="6dp" />
+
+            <Button
+                android:id="@+id/btnGoLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Login / Sign Up"
+                android:backgroundTint="@color/rescue_orange"
+                android:layout_marginTop="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Account Settings"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/navy"
+                android:layout_marginTop="20dp" />
+
+            <Button
+                android:id="@+id/btnEditProfile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Edit Profile"
+                android:layout_marginTop="8dp" />
+
+            <Button
+                android:id="@+id/btnSavedAddresses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Saved Addresses"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Support &amp; Legal"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/navy"
+                android:layout_marginTop="20dp" />
+
+            <Button
+                android:id="@+id/btnHelpSupport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Help &amp; Support"
+                android:layout_marginTop="8dp" />
+
+            <Button
+                android:id="@+id/btnTerms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Terms of Service"
+                android:layout_marginTop="8dp" />
+
+            <Button
+                android:id="@+id/btnPrivacy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Privacy Policy"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Share &amp; Rate"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/navy"
+                android:layout_marginTop="20dp" />
+
+            <Button
+                android:id="@+id/btnShare"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Share the App"
+                android:layout_marginTop="8dp" />
+
+            <Button
+                android:id="@+id/btnRate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rate the App"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Account"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/navy"
+                android:layout_marginTop="20dp" />
+
+            <Button
+                android:id="@+id/btnManageAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Manage Account"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Privacy Policy  •  Terms &amp; Conditions&#10;Version 1.0"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:textColor="@color/text_grey"
+                android:layout_marginTop="20dp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

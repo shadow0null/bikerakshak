@@ -47,6 +47,10 @@ class OrderAdapter : RecyclerView.Adapter<OrderAdapter.VH>() {
         val services: TextView = v.findViewById(R.id.tvOrderServices)
         val whenText: TextView = v.findViewById(R.id.tvOrderWhen)
         val total: TextView = v.findViewById(R.id.tvOrderTotal)
+        val step1: TextView = v.findViewById(R.id.tvStep1)
+        val step2: TextView = v.findViewById(R.id.tvStep2)
+        val step3: TextView = v.findViewById(R.id.tvStep3)
+        val step4: TextView = v.findViewById(R.id.tvStep4)
     }
 
     fun submitList(newList: List<Booking>) {
@@ -69,5 +73,13 @@ class OrderAdapter : RecyclerView.Adapter<OrderAdapter.VH>() {
         holder.services.text = b.services
         holder.whenText.text = "${b.date}  •  ${b.slot}  •  ${b.city}"
         holder.total.text = "Total ₹${b.total} — pay after service"
+        // Timeline: Pending = step 1 done; Completed = all done.
+        val done = if (b.status == "Completed") 4 else 1
+        val steps = listOf(holder.step1 to "Placed", holder.step2 to "On the Way", holder.step3 to "In Progress", holder.step4 to "Completed")
+        steps.forEachIndexed { i, (tv, label) ->
+            val isDone = i < done
+            tv.text = (if (isDone) "✓ " else "○ ") + label
+            tv.setTextColor(if (isDone) 0xFF15803D.toInt() else 0xFF999999.toInt())
+        }
     }
 }
