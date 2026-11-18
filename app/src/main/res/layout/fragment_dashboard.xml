@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BikeRakshak"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/navy" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Motihari, East Champaran"
+            android:textSize="14sp"
+            android:textColor="@color/text_grey"
+            android:layout_marginTop="4dp" />
+
+        <Button
+            android:id="@+id/btnBookService"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Book a Service"
+            android:backgroundTint="@color/rescue_orange"
+            android:layout_marginTop="24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Services"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/navy"
+            android:layout_marginTop="24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="General Service • Engine Oil Service • Puncture • Jump Start • Battery • Brakes • Chain &amp; Sprocket"
+            android:textSize="14sp"
+            android:textColor="@color/text_grey"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No active orders yet"
+            android:textSize="14sp"
+            android:textColor="@color/text_grey"
+            android:layout_marginTop="24dp" />
+    </LinearLayout>
+</ScrollView>
