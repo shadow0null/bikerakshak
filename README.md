@@ -4,6 +4,8 @@
 
 Native Kotlin Android app (package `com.bikerakshak.customer`), Material 3. Launch towns: Motihari, Dhaka, Raxaul, Chakia, Pakridayal, Kesaria, Areraj, Mehsi, Sugauli, Harsidhi, Turkaulia, Patahi.
 
+Brand: navy `#0F2340`, rescue orange `#FF6A00`. Real logo: shield + orange wrench app icon (`res/drawable/ic_launcher_foreground.png`, 512px) — used as the launcher/adaptive icon, the splash logo, and the logo tile on the Sign Up / Sign In screens. Logo package source files: `~/workspace/your_files/mechanic-app/` (primary light/dark, minimal, app icon final).
+
 ## Status — customer app screens complete
 
 - Screen 1 — Splash screen (navy + orange brand, 1.5s → home)
